@@ -83,7 +83,7 @@ export function Login() {
               src={toAbsoluteUrl('media/svg/brand-logos/google-icon.svg')}
               className='h-15px me-3'
             />
-            Sign in with Google
+            Sign in with Google 
           </a>
           {/* end::Google link */}
         </div>

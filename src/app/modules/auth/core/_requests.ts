@@ -26,7 +26,7 @@ const DEMO_USER: UserModel = {
   last_name: "Demo",
   fullname: "Admin Demo",
   roles: [1],
-  pic: "media/avatars/300-1.jpg",
+  pic: "media/avatars/blank.png",
   language: "es",
 };
 

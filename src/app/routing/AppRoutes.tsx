@@ -10,6 +10,7 @@ import {Routes, Route, BrowserRouter, Navigate} from 'react-router-dom'
 import {PrivateRoutes} from './PrivateRoutes'
 import {ErrorsPage} from '../modules/errors/ErrorsPage'
 import {Logout, AuthPage, useAuth} from '../modules/auth'
+import {SeriesPage} from '../modules/series'
 import {App} from '../App'
 
 /**
@@ -27,6 +28,8 @@ const AppRoutes: FC = () => {
         <Route element={<App />}>
           <Route path='error/*' element={<ErrorsPage />} />
           <Route path='logout' element={<Logout />} />
+          {/* Sitio público: la cartelera se ve sin iniciar sesión */}
+          <Route path='cartelera/*' element={<SeriesPage />} />
           {currentUser ? (
             <>
               <Route path='/*' element={<PrivateRoutes />} />
@@ -35,7 +38,7 @@ const AppRoutes: FC = () => {
           ) : (
             <>
               <Route path='auth/*' element={<AuthPage />} />
-              <Route path='*' element={<Navigate to='/auth' />} />
+              <Route path='*' element={<Navigate to='/cartelera' />} />
             </>
           )}
         </Route>
