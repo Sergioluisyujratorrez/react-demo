@@ -54,6 +54,8 @@ const TarjetaSerie = ({serie}: Props) => {
         </p>
         
       </div>
+
+      
     </div>
   )
 }
