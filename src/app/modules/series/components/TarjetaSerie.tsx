@@ -38,6 +38,7 @@ const TarjetaSerie = ({serie}: Props) => {
       </div>
       <div className='card-body p-5'>
         <div className='text-gray-900 fs-5 fw-bold text-truncate mb-2'>{serie.name}</div>
+        PRECIO:
         <div className='d-flex flex-wrap gap-1 mb-3'>
           {serie.genres.length > 0 ? (
             serie.genres.map((genero) => (
