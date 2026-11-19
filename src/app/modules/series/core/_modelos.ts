@@ -17,4 +17,12 @@ export interface Serie {
   rating: {average: number | null}
   image: ImagenTv | null
   summary: string | null
+  runtime: number
+  type: string
+  _embedded: {cast: Array<Actor>}
+}
+
+export interface Actor {
+  person: {id: number, name: string, image: ImagenTv | null }
+  character : {id: number, name: string}
 }

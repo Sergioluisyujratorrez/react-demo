@@ -13,3 +13,4 @@ const tvmaze = axios.create({baseURL: API_URL});
 // endpoints
 // get
 export const obtenerSeries = () => tvmaze.get<Array<Serie>>('/shows') 
+export const obtenerSeriePorId = (id: number) => tvmaze.get<Serie>(`/shows/${id}`, {params: {embed: 'cast'}})
